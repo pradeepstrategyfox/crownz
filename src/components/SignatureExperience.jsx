@@ -171,7 +171,7 @@ export default function SignatureExperience() {
                 pointerEvents: 'none',
             }} />
 
-            <div style={{ maxWidth: 1300, margin: '0 auto', padding: '0 60px' }}>
+            <div style={{ maxWidth: 1300, margin: '0 auto', padding: '0 24px' }}>
                 {/* Header */}
                 <div style={{ marginBottom: 80 }}>
                     <span className="section-label">The Cosmic Tracker</span>
@@ -190,7 +190,7 @@ export default function SignatureExperience() {
 
                 <div style={{
                     display: 'grid',
-                    gridTemplateColumns: '1fr 1fr',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
                     gap: 80,
                     alignItems: 'center',
                 }}>
@@ -199,7 +199,7 @@ export default function SignatureExperience() {
                         <canvas
                             ref={canvasRef}
                             style={{
-                                width: 340, height: 340, borderRadius: '50%',
+                                width: '100%', maxWidth: 340, height: 'auto', aspectRatio: '1/1', borderRadius: '50%',
                                 border: '1px solid rgba(200,164,90,0.15)',
                                 boxShadow: '0 0 60px rgba(200,164,90,0.05)',
                             }}
@@ -212,6 +212,8 @@ export default function SignatureExperience() {
                             border: '1px solid rgba(200,164,90,0.15)',
                             borderRadius: 4,
                             background: 'rgba(200,164,90,0.03)',
+                            width: '100%',
+                            maxWidth: 340,
                         }}>
                             <span style={{ fontSize: 32 }}>{moon.symbol}</span>
                             <div>

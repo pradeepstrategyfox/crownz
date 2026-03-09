@@ -21,7 +21,7 @@ export default function Navbar() {
     return (
         <nav ref={navRef} style={{
             position: 'fixed', top: 0, left: 0, right: 0, zIndex: 9000,
-            padding: '0 48px',
+            padding: '0 24px',
             height: 72,
             display: 'flex', alignItems: 'center', justifyContent: 'space-between',
             transition: 'background 0.5s, border-bottom 0.5s, backdrop-filter 0.5s',
@@ -54,37 +54,39 @@ export default function Navbar() {
 
             {/* Desktop Links */}
             <ul style={{
-                display: 'flex', gap: 40, listStyle: 'none',
-                alignItems: 'center',
+                display: 'flex', gap: 20, listStyle: 'none',
+                alignItems: 'center', flexWrap: 'wrap', justifyContent: 'flex-end',
             }}>
-                {links.map((l) => (
-                    <li key={l.href}>
-                        <a
-                            href={l.href}
-                            data-hover
-                            style={{
-                                fontFamily: 'var(--font-sans)',
-                                fontSize: 12,
-                                fontWeight: 500,
-                                letterSpacing: '0.15em',
-                                textTransform: 'uppercase',
-                                color: 'var(--muted)',
-                                transition: 'color 0.3s',
-                                position: 'relative',
-                            }}
-                            onMouseEnter={e => e.target.style.color = 'var(--star)'}
-                            onMouseLeave={e => e.target.style.color = 'var(--muted)'}
-                        >
-                            {l.label}
-                            <span style={{
-                                position: 'absolute', bottom: -4, left: 0, right: 0,
-                                height: 1, background: 'var(--gold)',
-                                transform: 'scaleX(0)', transformOrigin: 'left',
-                                transition: 'transform 0.3s var(--ease-cosmic)',
-                            }} className="nav-underline" />
-                        </a>
-                    </li>
-                ))}
+                <div className="nav-links" style={{ display: 'flex', gap: 20, alignItems: 'center' }}>
+                    {links.map((l) => (
+                        <li key={l.href}>
+                            <a
+                                href={l.href}
+                                data-hover
+                                style={{
+                                    fontFamily: 'var(--font-sans)',
+                                    fontSize: 12,
+                                    fontWeight: 500,
+                                    letterSpacing: '0.15em',
+                                    textTransform: 'uppercase',
+                                    color: 'var(--muted)',
+                                    transition: 'color 0.3s',
+                                    position: 'relative',
+                                }}
+                                onMouseEnter={e => e.target.style.color = 'var(--star)'}
+                                onMouseLeave={e => e.target.style.color = 'var(--muted)'}
+                            >
+                                {l.label}
+                                <span style={{
+                                    position: 'absolute', bottom: -4, left: 0, right: 0,
+                                    height: 1, background: 'var(--gold)',
+                                    transform: 'scaleX(0)', transformOrigin: 'left',
+                                    transition: 'transform 0.3s var(--ease-cosmic)',
+                                }} className="nav-underline" />
+                            </a>
+                        </li>
+                    ))}
+                </div>
                 <li>
                     <a
                         href="#collection"

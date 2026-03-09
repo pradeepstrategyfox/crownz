@@ -5,11 +5,11 @@ export default function Footer() {
             borderTop: '1px solid rgba(200,164,90,0.1)',
             padding: '60px 0 40px',
         }}>
-            <div style={{ maxWidth: 1300, margin: '0 auto', padding: '0 60px' }}>
+            <div style={{ maxWidth: 1300, margin: '0 auto', padding: '0 24px' }}>
                 {/* Top row */}
                 <div style={{
-                    display: 'grid', gridTemplateColumns: '1fr auto 1fr',
-                    gap: 40, alignItems: 'start', marginBottom: 60,
+                    display: 'flex', flexWrap: 'wrap',
+                    gap: 40, alignItems: 'start', justifyContent: 'space-between', marginBottom: 60,
                 }}>
                     {/* Logo + tagline */}
                     <div>
@@ -37,7 +37,7 @@ export default function Footer() {
                     </div>
 
                     {/* Center: Newsletter */}
-                    <div style={{ textAlign: 'center' }}>
+                    <div style={{ textAlign: 'left', minWidth: 'min(100%, 300px)' }}>
                         <div style={{ fontSize: 10, letterSpacing: '0.35em', color: 'var(--gold)', marginBottom: 16, fontFamily: 'var(--font-sans)', textTransform: 'uppercase' }}>
                             Cosmic Signal
                         </div>
@@ -83,7 +83,7 @@ export default function Footer() {
                     </div>
 
                     {/* Right: Links */}
-                    <div style={{ textAlign: 'right' }}>
+                    <div style={{ textAlign: 'left', minWidth: 'min(100%, 200px)' }}>
                         <div style={{ fontSize: 10, letterSpacing: '0.35em', color: 'var(--gold)', marginBottom: 20, fontFamily: 'var(--font-sans)', textTransform: 'uppercase' }}>
                             Navigate
                         </div>
@@ -119,7 +119,7 @@ export default function Footer() {
                 <div style={{
                     borderTop: '1px solid rgba(200,164,90,0.08)',
                     paddingTop: 28,
-                    display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                    display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16
                 }}>
                     <span style={{ fontFamily: 'var(--font-sans)', fontSize: 11, color: 'var(--muted)' }}>
                         © 2024 CrownZ. All rights reserved.

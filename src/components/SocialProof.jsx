@@ -63,8 +63,8 @@ export default function SocialProof() {
                 pointerEvents: 'none',
             }} />
 
-            <div style={{ maxWidth: 1300, margin: '0 auto', padding: '0 60px' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>
+            <div style={{ maxWidth: 1300, margin: '0 auto', padding: '0 24px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 80, alignItems: 'center' }}>
                     {/* Left: testimonial carousel */}
                     <div>
                         <span className="section-label">Community of Cosmic Walkers</span>

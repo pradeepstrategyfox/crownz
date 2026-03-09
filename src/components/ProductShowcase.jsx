@@ -12,6 +12,7 @@ const products = [
         href: 'https://crownz19.com/products/untitled-sep11_13-13',
         tag: 'Iconic',
         gradient: 'linear-gradient(135deg, rgba(26,212,200,0.08), rgba(26,212,200,0.02))',
+        image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80',
     },
     {
         id: 2,
@@ -24,6 +25,7 @@ const products = [
         href: 'https://crownz19.com/products/keys-chain',
         tag: 'Bestseller',
         gradient: 'linear-gradient(135deg, rgba(200,164,90,0.1), rgba(200,164,90,0.02))',
+        image: 'https://images.unsplash.com/photo-1599643478514-4a4347000b21?w=800&q=80',
     },
     {
         id: 3,
@@ -36,6 +38,7 @@ const products = [
         href: 'https://crownz19.com/products/black-star-ring-special-order-only',
         tag: 'Special Order',
         gradient: 'linear-gradient(135deg, rgba(123,47,255,0.08), rgba(123,47,255,0.02))',
+        image: 'https://images.unsplash.com/photo-1605100804763-247f67b5548e?w=800&q=80',
     },
     {
         id: 4,
@@ -48,6 +51,7 @@ const products = [
         href: 'https://crownz19.com/products/calligraphy-keys-necklace-teal',
         tag: 'Limited',
         gradient: 'linear-gradient(135deg, rgba(26,212,200,0.08), rgba(26,212,200,0.02))',
+        image: 'https://images.unsplash.com/photo-1599643477877-530eb83abc8e?w=800&q=80',
     },
 ];
 
@@ -81,7 +85,7 @@ export default function ProductShowcase() {
                 pointerEvents: 'none',
             }} />
 
-            <div style={{ maxWidth: 1300, margin: '0 auto', padding: '0 60px' }}>
+            <div style={{ maxWidth: 1300, margin: '0 auto', padding: '0 24px' }}>
                 {/* Header */}
                 <div style={{ marginBottom: 72, display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between' }}>
                     <div>
@@ -191,7 +195,7 @@ function ProductCard({ product: p }) {
                 transform: `perspective(1000px) rotateX(${tilt.y}deg) rotateY(${tilt.x}deg) translateZ(${hov ? 8 : 0}px)`,
                 willChange: 'transform',
                 textDecoration: 'none',
-                cursor: 'none',
+                cursor: 'pointer',
                 zIndex: 2,
             }}
         >
@@ -221,12 +225,17 @@ function ProductCard({ product: p }) {
 
             {/* Emoji / Product visual */}
             <div style={{
-                fontSize: 52, marginBottom: 24, lineHeight: 1,
-                transform: hov ? 'scale(1.1) translateY(-4px)' : 'scale(1)',
+                marginBottom: 24,
+                transform: hov ? 'scale(1.05) translateY(-4px)' : 'scale(1)',
                 transition: 'transform 0.4s var(--ease-cosmic)',
                 filter: hov ? `drop-shadow(0 0 16px ${p.glow})` : 'none',
+                width: '100%',
+                height: 220,
+                borderRadius: 8,
+                overflow: 'hidden',
+                background: 'rgba(0,0,0,0.3)',
             }}>
-                {product_icon(p.category)}
+                <img src={p.image} alt={p.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
 
             {/* Category label */}
@@ -287,25 +296,6 @@ function ProductCard({ product: p }) {
     );
 }
 
-function product_icon(category) {
-    if (category === 'Apparel') return (
-        <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
-            <path d="M10 14L20 8L26 13L32 8L42 14V22H38V44H14V22H10V14Z" stroke="var(--teal)" strokeWidth="1.5" strokeLinejoin="round" fill="rgba(26,212,200,0.06)" />
-        </svg>
-    );
-    if (category === 'Fine Jewelry') return (
-        <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
-            <circle cx="26" cy="26" r="16" stroke="var(--violet)" strokeWidth="1.5" fill="none" />
-            <circle cx="26" cy="26" r="5" fill="rgba(123,47,255,0.3)" stroke="var(--violet)" strokeWidth="1" />
-            <path d="M26 10 L26 18 M26 34 L26 42 M10 26 L18 26 M34 26 L42 26" stroke="var(--violet)" strokeWidth="1" opacity="0.5" />
-        </svg>
-    );
-    return (
-        <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
-            <circle cx="26" cy="12" r="4" stroke="var(--gold)" strokeWidth="1.5" />
-            <ellipse cx="26" cy="36" rx="14" ry="6" stroke="var(--gold)" strokeWidth="1.5" fill="rgba(200,164,90,0.05)" />
-            <line x1="26" y1="16" x2="26" y2="30" stroke="var(--gold)" strokeWidth="1.5" />
-            <path d="M12 30 Q26 44 40 30" stroke="var(--gold)" strokeWidth="1" opacity="0.4" />
-        </svg>
-    );
-}
+
+
+
