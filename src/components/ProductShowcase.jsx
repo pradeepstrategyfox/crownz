@@ -25,7 +25,7 @@ const products = [
         href: 'https://crownz19.com/products/keys-chain',
         tag: 'Bestseller',
         gradient: 'linear-gradient(135deg, rgba(200,164,90,0.1), rgba(200,164,90,0.02))',
-        image: 'https://images.unsplash.com/photo-1599643478514-4a4347000b21?w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800&q=80',
     },
     {
         id: 3,
@@ -38,7 +38,7 @@ const products = [
         href: 'https://crownz19.com/products/black-star-ring-special-order-only',
         tag: 'Special Order',
         gradient: 'linear-gradient(135deg, rgba(123,47,255,0.08), rgba(123,47,255,0.02))',
-        image: 'https://images.unsplash.com/photo-1605100804763-247f67b5548e?w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=800&q=80',
     },
     {
         id: 4,
