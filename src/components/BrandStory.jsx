@@ -79,7 +79,7 @@ export default function BrandStory() {
                 style={{
                     position: 'sticky', top: 0, height: '100vh',
                     overflow: 'hidden', display: 'flex', flexDirection: 'column',
-                    background: 'var(--cosmos)',
+                    background: 'var(--void)',
                 }}
             >
                 {/* Section Tag */}

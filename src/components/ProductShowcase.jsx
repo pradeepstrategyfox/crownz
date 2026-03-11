@@ -71,7 +71,7 @@ export default function ProductShowcase() {
 
     return (
         <section id="collection" style={{
-            background: 'var(--deep)',
+            background: 'var(--void)',
             padding: '120px 0',
             position: 'relative',
             overflow: 'hidden',

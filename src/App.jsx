@@ -7,6 +7,9 @@ import SignatureExperience from './components/SignatureExperience';
 import SocialProof from './components/SocialProof';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
+import EcommerceFeatures from './components/EcommerceFeatures';
+import ShoppableReels from './components/ShoppableReels';
+import Collections from './components/Collections';
 
 export default function App() {
   return (
@@ -14,8 +17,11 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <Collections />
+        <EcommerceFeatures />
         <BrandStory />
         <ProductShowcase />
+        <ShoppableReels />
         <SignatureExperience />
         <SocialProof />
         <CTA />

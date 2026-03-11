@@ -157,7 +157,7 @@ export default function SignatureExperience() {
             id="experience"
             ref={sectionRef}
             style={{
-                background: 'var(--cosmos)',
+                background: 'var(--void)',
                 padding: '120px 0',
                 position: 'relative',
                 overflow: 'hidden',

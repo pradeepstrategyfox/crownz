@@ -48,7 +48,7 @@ export default function SocialProof() {
         <section
             id="community"
             style={{
-                background: 'var(--deep)',
+                background: 'var(--void)',
                 padding: '120px 0',
                 position: 'relative',
                 overflow: 'hidden',
