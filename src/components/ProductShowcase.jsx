@@ -12,7 +12,7 @@ const products = [
         href: 'https://crownz19.com/products/untitled-sep11_13-13',
         tag: 'Iconic',
         gradient: 'linear-gradient(135deg, rgba(26,212,200,0.08), rgba(26,212,200,0.02))',
-        image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80',
+        image: 'https://crownz19.com/cdn/shop/files/5D145896-A148-4073-9705-31D37DABDD42.jpg?v=1726076228&width=990',
     },
     {
         id: 2,
@@ -25,7 +25,7 @@ const products = [
         href: 'https://crownz19.com/products/keys-chain',
         tag: 'Bestseller',
         gradient: 'linear-gradient(135deg, rgba(200,164,90,0.1), rgba(200,164,90,0.02))',
-        image: 'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800&q=80',
+        image: 'https://crownz19.com/cdn/shop/products/image_b33648e8-9e77-4469-b0ee-8093d0c246c1.jpg?v=1571584667&width=1100',
     },
     {
         id: 3,
@@ -38,7 +38,7 @@ const products = [
         href: 'https://crownz19.com/products/black-star-ring-special-order-only',
         tag: 'Special Order',
         gradient: 'linear-gradient(135deg, rgba(123,47,255,0.08), rgba(123,47,255,0.02))',
-        image: 'https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=800&q=80',
+        image: 'https://crownz19.com/cdn/shop/products/image_e40bda4e-1491-4eb4-bd45-c7e0301195b3.jpg?v=1692128709&width=1100',
     },
     {
         id: 4,
@@ -51,7 +51,7 @@ const products = [
         href: 'https://crownz19.com/products/calligraphy-keys-necklace-teal',
         tag: 'Limited',
         gradient: 'linear-gradient(135deg, rgba(26,212,200,0.08), rgba(26,212,200,0.02))',
-        image: 'https://images.unsplash.com/photo-1599643477877-530eb83abc8e?w=800&q=80',
+        image: 'https://crownz19.com/cdn/shop/files/C6FD0202-1E6B-46EE-9B4C-CBDE225C7BF1.jpg?v=1696653542&width=1100',
     },
 ];
 

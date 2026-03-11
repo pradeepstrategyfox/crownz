@@ -21,7 +21,7 @@ const reels = [
   },
   {
     id: 3,
-    videoUrl: 'https://www.youtube.com/shorts/9JsTj1Ymi_I',
+    videoUrl: 'https://www.youtube.com/shorts/CR7C1AV5TcI',
     productName: 'Calligraphy Keys Necklace',
     price: '$74.99',
     productLink: 'https://crownz19.com/products/calligraphy-keys-necklace-teal',

@@ -21,7 +21,7 @@ export default function Hero() {
             {/* Background Image */}
             <div style={{
                 position: 'absolute', inset: 0,
-                backgroundImage: 'url("https://images.unsplash.com/photo-1763130782857-62b04f88ebdb?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+                backgroundImage: 'url("/homepage.jpeg")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
