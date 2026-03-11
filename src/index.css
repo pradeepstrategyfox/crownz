@@ -214,3 +214,20 @@ button {
 img {
   max-width: 100%;
 }
+
+/* Collection Grid Utilities */
+.collections-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 768px) {
+  .collections-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .collections-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

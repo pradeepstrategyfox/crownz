@@ -3,32 +3,58 @@ import { useState } from 'react';
 
 const collections = [
   {
-    id: 'apparel',
-    title: 'Cosmic Apparel',
-    image: 'https://images.unsplash.com/photo-1627811269913-c0d964da1eb2?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    link: '#',
-    span: 'col-span-12 md:col-span-6',
+    id: 'all-products',
+    title: 'All Products',
+    image: 'https://crownz19.com/cdn/shop/collections/All_Products.png?v=1692126995&width=1500',
+    link: 'https://crownz19.com/collections/all-products',
   },
   {
-    id: 'jewelry',
-    title: 'Fine Jewelry',
-    image: 'https://images.unsplash.com/photo-1616837874254-8d5aaa63e273?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bmVja2xhY2V8ZW58MHwyfDB8fHwy',
-    link: '#',
-    span: 'col-span-12 md:col-span-6',
+    id: 'jewelz',
+    title: 'Crownz Jewels',
+    image: 'https://crownz19.com/cdn/shop/collections/Jewelz.png?v=1696360671&width=1500',
+    link: 'https://crownz19.com/collections/jewelz',
   },
   {
-    id: 'rings',
-    title: 'Signature Rings',
-    image: 'https://images.unsplash.com/photo-1769313724371-19dc9a052dc9?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    link: '#',
-    span: 'col-span-12 md:col-span-6',
+    id: 'education',
+    title: 'Education',
+    image: 'https://crownz19.com/cdn/shop/collections/Books.png?v=1692125100&width=1500',
+    link: 'https://crownz19.com/collections/books-1',
   },
   {
-    id: 'accessories',
-    title: 'Accessories',
-    image: 'https://images.unsplash.com/photo-1584916201218-f4242ceb4809?q=80&w=1000&auto=format&fit=crop',
-    link: '#',
-    span: 'col-span-12 md:col-span-6',
+    id: 'emf',
+    title: 'Frequency (EMF) Protection Chips',
+    image: 'https://crownz19.com/cdn/shop/collections/EMF.png?v=1692125413&width=1500',
+    link: 'https://crownz19.com/collections/frequency-emf-protection-crownz',
+  },
+  {
+    id: 'legend',
+    title: 'Legend Crownz',
+    image: 'https://crownz19.com/cdn/shop/collections/IMG_2310.jpg?v=1696231396&width=1500',
+    link: 'https://crownz19.com/collections/legend-crownz',
+  },
+  {
+    id: 'luxury',
+    title: 'Luxury Crownz',
+    image: 'https://crownz19.com/cdn/shop/collections/crownz_collections_eb48801c-bbc9-41e1-bac7-823e5db23a57.png?v=1696360615&width=1500',
+    link: 'https://crownz19.com/collections/luxury-crownz',
+  },
+  {
+    id: 'origin',
+    title: 'Origin Crownz',
+    image: 'https://crownz19.com/cdn/shop/collections/crownz_collections.png?v=1696231057&width=1500',
+    link: 'https://crownz19.com/collections/all-crownz',
+  },
+  {
+    id: 'clothing',
+    title: 'SS26 Capsule collection',
+    image: 'https://crownz19.com/cdn/shop/collections/Clothing.png?v=1696360823&width=1500',
+    link: 'https://crownz19.com/collections/clothing',
+  },
+  {
+    id: 'top-crownz',
+    title: 'Top CrownZ Collection',
+    image: 'https://crownz19.com/cdn/shop/collections/cae5dc19-d260-4194-8413-aed00e8ed299.jpg?v=1696360721&width=1500',
+    link: 'https://crownz19.com/collections/legend-crownz-collection',
   },
 ];
 
@@ -54,11 +80,7 @@ export default function Collections() {
         </div>
 
         {/* Bento Grid */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(12, 1fr)',
-          gap: 24,
-        }}>
+        <div className="collections-grid">
           {collections.map((item) => (
             <CollectionCard key={item.id} item={item} />
           ))}
@@ -71,13 +93,6 @@ export default function Collections() {
 function CollectionCard({ item }) {
   const [isHovered, setIsHovered] = useState(false);
 
-  // Parse col-span manually if needed, or use gridColumn based on span prop
-  let gridCol = 'span 12';
-  if (item.span.includes('md:col-span-6')) gridCol = 'span 6';
-
-  // Responsive logic for mobile (forces full width under 768px, which index.css handles usually, but we apply inline style here as a hack since index.css doesn't have a utility class)
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-
   return (
     <a
       href={item.link}
@@ -86,7 +101,6 @@ function CollectionCard({ item }) {
       onFocus={() => setIsHovered(true)}
       onBlur={() => setIsHovered(false)}
       style={{
-        gridColumn: isMobile ? 'span 12' : gridCol,
         position: 'relative',
         height: 400,
         borderRadius: 12,
