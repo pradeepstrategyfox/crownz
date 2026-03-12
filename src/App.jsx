@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import EcommerceFeatures from './components/EcommerceFeatures';
 import ShoppableReels from './components/ShoppableReels';
 import Collections from './components/Collections';
+import Cosmism from './components/Cosmism';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <Cosmism />
         <Collections />
         <EcommerceFeatures />
         <BrandStory />
